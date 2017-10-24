@@ -1,0 +1,319 @@
+
+/* Logged by FlameRobin 0.9.3 at Mon Oct 23 23:15:15 2017
+   User: zenkinds    Database: /opt/base.fdb */
+create table ta_debts
+    (
+    id_debt integer,
+    id_debtor integer,
+    id_creditor integer,
+    amnt_initial decimal(18,2),
+    amnt_current decimal (18,2),
+    ts_initial timestamp,
+    ts_repmnt timestamp
+    );
+/* Logged by FlameRobin 0.9.3 at Mon Oct 23 23:15:15 2017
+   User: zenkinds    Database: /opt/base.fdb */
+create table ta_debts
+    (
+    id_debt integer,
+    id_debtor integer,
+    id_creditor integer,
+    amnt_initial decimal(18,2),
+    amnt_current decimal (18,2),
+    ts_initial timestamp,
+    ts_repmnt timestamp
+    );
+/* Logged by FlameRobin 0.9.3 at Mon Oct 23 23:18:51 2017
+   User: zenkinds    Database: /opt/base.fdb */
+alter table ta_debts
+add trm timestamp;
+/* Logged by FlameRobin 0.9.3 at Mon Oct 23 23:18:51 2017
+   User: zenkinds    Database: /opt/base.fdb */
+alter table ta_debts
+add trm timestamp;
+/* Logged by FlameRobin 0.9.3 at Mon Oct 23 23:19:29 2017
+   User: zenkinds    Database: /opt/base.fdb */
+create table ta_debts_hist
+    (
+    id_debt integer,
+    id_debtor integer,
+    id_creditor integer,
+    amnt_initial decimal(18,2),
+    amnt_current decimal (18,2),
+    ts_initial timestamp,
+    ts_repmnt timestamp,
+    ts_trm timestamp
+    );
+/* Logged by FlameRobin 0.9.3 at Mon Oct 23 23:19:29 2017
+   User: zenkinds    Database: /opt/base.fdb */
+create table ta_debts_hist
+    (
+    id_debt integer,
+    id_debtor integer,
+    id_creditor integer,
+    amnt_initial decimal(18,2),
+    amnt_current decimal (18,2),
+    ts_initial timestamp,
+    ts_repmnt timestamp,
+    ts_trm timestamp
+    );
+/* Logged by FlameRobin 0.9.3 at Mon Oct 23 23:20:05 2017
+   User: zenkinds    Database: /opt/base.fdb */
+alter table ta_debts
+drop trm;
+/* Logged by FlameRobin 0.9.3 at Mon Oct 23 23:20:05 2017
+   User: zenkinds    Database: /opt/base.fdb */
+alter table ta_debts
+drop trm;
+/* Logged by FlameRobin 0.9.3 at Mon Oct 23 23:20:29 2017
+   User: zenkinds    Database: /opt/base.fdb */
+alter table ta_debts
+add ts_trm timestamp;
+/* Logged by FlameRobin 0.9.3 at Mon Oct 23 23:20:29 2017
+   User: zenkinds    Database: /opt/base.fdb */
+alter table ta_debts
+add ts_trm timestamp;
+/* Logged by FlameRobin 0.9.3 at Mon Oct 23 23:21:40 2017
+   User: zenkinds    Database: /opt/base.fdb */
+create sequence se_id_debt;
+/* Logged by FlameRobin 0.9.3 at Mon Oct 23 23:21:40 2017
+   User: zenkinds    Database: /opt/base.fdb */
+create sequence se_id_debt;
+/* Logged by FlameRobin 0.9.3 at Mon Oct 23 23:21:56 2017
+   User: zenkinds    Database: /opt/base.fdb */
+create sequence se_id_client;
+/* Logged by FlameRobin 0.9.3 at Mon Oct 23 23:21:56 2017
+   User: zenkinds    Database: /opt/base.fdb */
+create sequence se_id_client;
+/* Logged by FlameRobin 0.9.3 at Mon Oct 23 23:24:39 2017
+   User: zenkinds    Database: /opt/base.fdb */
+create table ta_clients
+    (
+    id_client integer,
+    tel varchar(10),
+    name varchar(100)
+    );
+/* Logged by FlameRobin 0.9.3 at Mon Oct 23 23:24:39 2017
+   User: zenkinds    Database: /opt/base.fdb */
+create table ta_clients
+    (
+    id_client integer,
+    tel varchar(10),
+    name varchar(100)
+    );
+/* Logged by FlameRobin 0.9.3 at Mon Oct 23 23:32:09 2017
+   User: zenkinds    Database: /opt/base.fdb */
+create sequence se_id_feat;
+/* Logged by FlameRobin 0.9.3 at Mon Oct 23 23:32:09 2017
+   User: zenkinds    Database: /opt/base.fdb */
+create sequence se_id_feat;
+/* Logged by FlameRobin 0.9.3 at Mon Oct 23 23:34:13 2017
+   User: zenkinds    Database: /opt/base.fdb */
+create table ta_overall_dict
+    (
+    core varchar(20),
+    feat_name varchar(20),
+    id_feat smallint,
+    ts_start timestamp,
+    style varchar(3)
+    );
+/* Logged by FlameRobin 0.9.3 at Mon Oct 23 23:34:13 2017
+   User: zenkinds    Database: /opt/base.fdb */
+create table ta_overall_dict
+    (
+    core varchar(20),
+    feat_name varchar(20),
+    id_feat smallint,
+    ts_start timestamp,
+    style varchar(3)
+    );
+/* Logged by FlameRobin 0.9.3 at Mon Oct 23 23:34:54 2017
+   User: zenkinds    Database: /opt/base.fdb */
+create table ta_client_feat
+    (
+    id_client integer,
+    id_feat smallint,
+    feat_val_dt date,
+    feat_val_ts timestamp,
+    feat_val_ch varchar(100),
+    feat_val_dec decimal (18,2),
+    feat_val_int integer,
+    ts_start timestamp
+    );
+/* Logged by FlameRobin 0.9.3 at Mon Oct 23 23:34:54 2017
+   User: zenkinds    Database: /opt/base.fdb */
+create table ta_client_feat
+    (
+    id_client integer,
+    id_feat smallint,
+    feat_val_dt date,
+    feat_val_ts timestamp,
+    feat_val_ch varchar(100),
+    feat_val_dec decimal (18,2),
+    feat_val_int integer,
+    ts_start timestamp
+    );
+/* Logged by FlameRobin 0.9.3 at Mon Oct 23 23:56:03 2017
+   User: zenkinds    Database: /opt/base.fdb */
+SET TERM ^ ;
+create procedure pr_create_feat
+    (
+    v_core varchar(20),
+    v_feat_name varchar(20),
+    v_style varchar(3)
+    )
+as
+begin
+    if (:v_style not in ('dt','ts','ch','dec','int'))
+        then exit;
+    insert into ta_overall_dict
+        (core,feat_name,id_feat,ts_start,style)
+        values
+        (:v_core,:v_feat_name,next value for se_id_feat,current_timestamp,:v_style);
+end^
+SET TERM ; ^
+
+/* Logged by FlameRobin 0.9.3 at Mon Oct 23 23:56:03 2017
+   User: zenkinds    Database: /opt/base.fdb */
+SET TERM ^ ;
+create procedure pr_create_feat
+    (
+    v_core varchar(20),
+    v_feat_name varchar(20),
+    v_style varchar(3)
+    )
+as
+begin
+    if (:v_style not in ('dt','ts','ch','dec','int'))
+        then exit;
+    insert into ta_overall_dict
+        (core,feat_name,id_feat,ts_start,style)
+        values
+        (:v_core,:v_feat_name,next value for se_id_feat,current_timestamp,:v_style);
+end^
+SET TERM ; ^
+
+/* Logged by FlameRobin 0.9.3 at Mon Oct 23 23:56:44 2017
+   User: zenkinds    Database: /opt/base.fdb */
+execute procedure PR_CREATE_FEAT ('client', 'ts_create', 'ts');
+/* Logged by FlameRobin 0.9.3 at Mon Oct 23 23:56:44 2017
+   User: zenkinds    Database: /opt/base.fdb */
+execute procedure PR_CREATE_FEAT ('client', 'ts_create', 'ts');
+/* Logged by FlameRobin 0.9.3 at Tue Oct 24 00:07:10 2017
+   User: zenkinds    Database: /opt/base.fdb */
+SET TERM ^ ;
+create procedure pr_create_client
+    (
+    v_tel varchar(10),
+    v_name varchar(100)
+    )
+as
+    declare variable v_id_client integer;
+    declare variable v_ts timestamp;
+begin
+    if (exists (select 1 from ta_clients where tel=:v_tel))
+        then exit;
+    v_id_client=next value for se_id_client;
+    v_ts=current_timestamp;
+    insert into ta_clients (id_client,tel,name)
+        values (:v_id_client,:v_tel,:v_name);
+    insert into ta_client_feat (id_client,id_feat,feat_val_ts,ts_start)
+        values (:v_id_client,1,:v_ts,:v_ts);        
+end^
+SET TERM ; ^
+
+/* Logged by FlameRobin 0.9.3 at Tue Oct 24 00:07:10 2017
+   User: zenkinds    Database: /opt/base.fdb */
+SET TERM ^ ;
+create procedure pr_create_client
+    (
+    v_tel varchar(10),
+    v_name varchar(100)
+    )
+as
+    declare variable v_id_client integer;
+    declare variable v_ts timestamp;
+begin
+    if (exists (select 1 from ta_clients where tel=:v_tel))
+        then exit;
+    v_id_client=next value for se_id_client;
+    v_ts=current_timestamp;
+    insert into ta_clients (id_client,tel,name)
+        values (:v_id_client,:v_tel,:v_name);
+    insert into ta_client_feat (id_client,id_feat,feat_val_ts,ts_start)
+        values (:v_id_client,1,:v_ts,:v_ts);        
+end^
+SET TERM ; ^
+
+/* Logged by FlameRobin 0.9.3 at Tue Oct 24 00:07:56 2017
+   User: zenkinds    Database: /opt/base.fdb */
+execute procedure PR_CREATE_CLIENT ('9258688171', 'zenkinds');
+/* Logged by FlameRobin 0.9.3 at Tue Oct 24 00:07:56 2017
+   User: zenkinds    Database: /opt/base.fdb */
+execute procedure PR_CREATE_CLIENT ('9258688171', 'zenkinds');
+/* Logged by FlameRobin 0.9.3 at Tue Oct 24 00:08:57 2017
+   User: zenkinds    Database: /opt/base.fdb */
+grant all on ta_clients to qra;
+/* Logged by FlameRobin 0.9.3 at Tue Oct 24 00:08:57 2017
+   User: zenkinds    Database: /opt/base.fdb */
+grant all on ta_clients to qra;
+/* Logged by FlameRobin 0.9.3 at Tue Oct 24 00:10:43 2017
+   User: zenkinds    Database: /opt/base.fdb */
+grant all on ta_client_feat to qra;
+/* Logged by FlameRobin 0.9.3 at Tue Oct 24 00:10:43 2017
+   User: zenkinds    Database: /opt/base.fdb */
+grant all on ta_client_feat to qra;
+/* Logged by FlameRobin 0.9.3 at Tue Oct 24 00:10:43 2017
+   User: zenkinds    Database: /opt/base.fdb */
+grant all on ta_debts to qra;
+/* Logged by FlameRobin 0.9.3 at Tue Oct 24 00:10:43 2017
+   User: zenkinds    Database: /opt/base.fdb */
+grant all on ta_debts to qra;
+/* Logged by FlameRobin 0.9.3 at Tue Oct 24 00:10:43 2017
+   User: zenkinds    Database: /opt/base.fdb */
+grant all on ta_debts_hist to qra;
+/* Logged by FlameRobin 0.9.3 at Tue Oct 24 00:10:43 2017
+   User: zenkinds    Database: /opt/base.fdb */
+grant all on ta_debts_hist to qra;
+/* Logged by FlameRobin 0.9.3 at Tue Oct 24 00:10:44 2017
+   User: zenkinds    Database: /opt/base.fdb */
+grant all on ta_overall_dict to qra;
+/* Logged by FlameRobin 0.9.3 at Tue Oct 24 00:10:44 2017
+   User: zenkinds    Database: /opt/base.fdb */
+grant all on ta_overall_dict to qra;
+/* Logged by FlameRobin 0.9.3 at Tue Oct 24 00:12:16 2017
+   User: zenkinds    Database: /opt/base.fdb */
+grant execute on procedure pr_create_client to qra;
+/* Logged by FlameRobin 0.9.3 at Tue Oct 24 00:12:16 2017
+   User: zenkinds    Database: /opt/base.fdb */
+grant execute on procedure pr_create_client to qra;
+/* Logged by FlameRobin 0.9.3 at Tue Oct 24 00:12:17 2017
+   User: zenkinds    Database: /opt/base.fdb */
+grant execute on procedure pr_create_feat to qra;
+/* Logged by FlameRobin 0.9.3 at Tue Oct 24 00:12:17 2017
+   User: zenkinds    Database: /opt/base.fdb */
+grant execute on procedure pr_create_feat to qra;
+/* Logged by FlameRobin 0.9.3 at Tue Oct 24 00:14:01 2017
+   User: zenkinds    Database: /opt/base.fdb */
+grant usage on sequence se_id_feat to qra;
+/* Logged by FlameRobin 0.9.3 at Tue Oct 24 00:14:01 2017
+   User: zenkinds    Database: /opt/base.fdb */
+grant usage on sequence se_id_feat to qra;
+/* Logged by FlameRobin 0.9.3 at Tue Oct 24 00:14:02 2017
+   User: zenkinds    Database: /opt/base.fdb */
+grant usage on sequence se_id_client to qra;
+/* Logged by FlameRobin 0.9.3 at Tue Oct 24 00:14:02 2017
+   User: zenkinds    Database: /opt/base.fdb */
+grant usage on sequence se_id_client to qra;
+/* Logged by FlameRobin 0.9.3 at Tue Oct 24 00:14:02 2017
+   User: zenkinds    Database: /opt/base.fdb */
+grant usage on sequence se_id_debt to qra;
+/* Logged by FlameRobin 0.9.3 at Tue Oct 24 00:14:02 2017
+   User: zenkinds    Database: /opt/base.fdb */
+grant usage on sequence se_id_debt to qra;
+/* Logged by FlameRobin 0.9.3 at Tue Oct 24 00:15:53 2017
+   User: zenkinds    Database: /opt/base.fdb */
+drop table lol;
+/* Logged by FlameRobin 0.9.3 at Tue Oct 24 00:15:53 2017
+   User: zenkinds    Database: /opt/base.fdb */
+drop table lol;
